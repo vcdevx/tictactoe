@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+*, html {
+    border: 0 auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+:root {
+
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.boardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 800px;
+    height: 700px;
+    background: beige;
+    border: 5px solid black;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    width: 33.33%;
+    height: 33.33%;
+    border: 5px solid black;
+    cursor: pointer;
+    font-size: 15rem;
+}
+
+.blackBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+.playerNameSelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    background: red;
+
+}
+
+input, label {
+    display: inline-block;
+}
