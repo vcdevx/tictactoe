@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Lato:wght@700&display=swap');
 
 *, html {
     border: 0 auto;
@@ -12,23 +12,35 @@
     box-sizing: inherit;
 }
 :root {
-
+    --black-bg: #0d0d0d;
+    --infrared: #ff3333;
+    --gray: #404040;
+    --ivory: #f2f2f2;
 }
 
 body {
-    position: relative;
     padding: 0;
     margin: 0;
+    background: var(--black-bg);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .boardContainer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 800px;
-    height: 700px;
-    background: beige;
-    border: 5px solid black;
+    width: 500px;
+    height: 500px;
+    background: #4040442d;
+    border: 1px solid var(--infrared);
 }
 
 .board {
@@ -36,33 +48,98 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
-    width: 33.33%;
-    height: 33.33%;
-    border: 5px solid black;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    min-width: calc(100% / 3);
+    min-height: calc(100% / 3);
+    border: 1px solid var(--infrared);
     cursor: pointer;
-    font-size: 15rem;
+    font-size: 11rem;
+    color: var(--ivory)
 }
 
-.blackBackground {
+.blackBackground, .restartBackground {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.356);
+    background-color: rgba(0, 0, 0, 0.596);
+    z-index: 99;
 }
 
 .playerNameSelection {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 600px;
     height: 250px;
-    background: red;
-
+    background:rgba(0, 0, 0, 0.596);
+    z-index: 100;
 }
 
 input, label {
-    display: inline-block;
+    display: block;
+    color: var(--ivory);
+}
+
+input {
+    background: #40404098;
+    width: 275px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 8px;
+}
+
+label {
+    font-family: 'Changa', sans-serif;
+    font-size: 1.3rem;
+}
+
+label:nth-of-type(2) {
+    margin-top: 15px;
+}
+h1 {
+    font-family: 'Changa', sans-serif;
+    position: relative;
+    color: var(--ivory);
+    padding: 0;
+    margin: 0;
+    bottom: 40px;
+}
+
+h2, .winAnnouncement {
+    font-family: 'Changa', sans-serif;
+    position: relative;
+    color: var(--ivory);
+    bottom: 30px;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+}
+form {
+    text-align: center;
+}
+
+button {
+    height: px;
+    width: 100px;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    color: var(--ivory);
+    border: 1px solid var(--ivory);
+    background: var(--gray);
+    cursor: pointer;
+    font-family: 'Changa', sans-serif;
+}
+
+#restartBtn {
+    display: block;
+    position: relative;
+    top: 10px;
+    padding: 0;
+    visibility: hidden;
 }

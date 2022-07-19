@@ -6,31 +6,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <title>Tic-Tac-Toe</title>
     </head>
     <body>
-        <div class="blackBackground">
-            <div class="playerNameSelection">
-                <form class="playerNameForm" id="playerNameForm">
-                    <label for="playerOne" class="playerOneName">Enter A Name For Player One</label>
-                    <input type="text" name="playerOne" id="playerOne" placeholder="Enter player one's name">
-                    <label for="playerTwo" class="playerTwoName">Enter A Name For Player Two</label>
-                    <input type="text" name="playerTwo" id="playerTwo" placeholder="Enter player two's name">
-                    <button type="button" form="playerNameForm" id="startBtn">Start !</button>
-                </form>
+        <main class="main">
+            <h1>Tic-Tac-Toe</h1>
+            <h2 class="winAnnouncement"></h2>
+            <div class="blackBackground">
+                <div class="playerNameSelection">
+                    <form class="playerNameForm" id="playerNameForm">
+                        <label for="playerOne" class="playerOneName"><span class="material-symbols-outlined">man</span>Enter A Name For Player One</label>
+                        <input type="text" name="playerOne" id="playerOne" placeholder="Enter player one's name">
+                        <label for="playerTwo" class="playerTwoName"><span class="material-symbols-outlined">man</span>Enter A Name For Player Two</label>
+                        <input type="text" name="playerTwo" id="playerTwo" placeholder="Enter player two's name">
+                        <button type="button" form="playerNameForm" id="startBtn">START !</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="boardContainer">
-            <div class="board" data-space="1" id="0"></div>
-            <div class="board" data-space="2" id="1"></div>
-            <div class="board" data-space="3" id="2"></div>
-            <div class="board" data-space="4" id="3"></div>
-            <div class="board" data-space="5" id="4"></div>
-            <div class="board" data-space="6" id="5"></div>
-            <div class="board" data-space="7" id="6"></div>
-            <div class="board" data-space="8" id="7"></div>
-            <div class="board" data-space="9" id="8"></div>
-        </div>
-        <button type="button" onclick="checkName()">CHECK</button>
+            <div class="boardContainer">
+                <div class="board" id="0"></div>
+                <div class="board" id="1"></div>
+                <div class="board" id="2"></div>
+                <div class="board" id="3"></div>
+                <div class="board" id="4"></div>
+                <div class="board" id="5"></div>
+                <div class="board" id="6"></div>
+                <div class="board" id="7"></div>
+                <div class="board" id="8"></div>
+            </div>
+            <button type="button" form="playerNameForm" id="restartBtn">RESTART !</button>
+        </main>
     </body>
 </html>
